@@ -10,6 +10,8 @@ Unidade curriculares integradas:
 # Sumário
 1. [Objetivo](#objetivo)
 2. [Business do projeto](#business-do-projeto)
+3. [Modulos](modulos)
+4. [Especificações dos Módulos](especificações-dos-módulos)
 
 # Objetivo
 Desenvolver um projeto para informatizar e controlar uma Pizzaria.
@@ -21,7 +23,7 @@ A empresa pretende entrar a fundo na divulgação de seus produtos através da t
 
 Com o crescimento do mercado mundial pela internet hoje o Brasil tem bilhões de acessos a diversos sites de vendas por ano e milhões de produtos estão sendo comercializados com a população brasileira.
 
-# Requisitos do Projeto
+# Modulos
 O projeto deverá ser desenvolvido em três grandes módulos, sendo eles:
 * Modulo 0: “Projeção no Mercado”;
 * Modulo 1: “CMS do site - Catalogo Eletrônico”;
@@ -34,6 +36,9 @@ O objetivo deste é divulgação da empresa no mercado, ou seja, você deverá c
 Deverá ser criado um Site obedecendo os padrões de desenvolvimento Web utilizando (HTML5, CSS3 e Java Script).
 
 ## Modulo 1
+Este modulo deverá ser para criar um sistema de catalago eletronico de produtos, onde os funcionários da pizzaria consigam alimentar todas as informações que serão apresentadas no Web Site.
+
+Neste módulo somente funcionários autorizados poderão ter acesso.
 
 ## Modelo 2
 Você deverá publicar o banco de dados, back-end e front-end, dessa maneira o sistema poderá ser acessado de qualquer lugar do mundo.
