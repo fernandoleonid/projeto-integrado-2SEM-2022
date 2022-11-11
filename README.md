@@ -12,6 +12,13 @@ Unidade curriculares integradas:
 2. [Business do projeto](#business-do-projeto)
 3. [Modulos](#modulos)
 4. [Especificações dos Módulos](#especificações-dos-módulos)
+5. [Requisitos Funcionais do Modulo 0](#requisitos-funcionais-do-modulo-0)
+6. [Requisitos Funcionais do Modulo 1](#requisitos-funcionais-do-modulo-1)
+7. [Requisitos Funcionais do Modulo 2](#requisitos-funcionais-do-modulo-2)
+8. [Antes de começar a desenvolver](#antes-de-começar-a-desenvolver)
+9. [Entrega do projeto](#entrega-do-projeto)
+10. [Critérios de Avaliação](#critérios-de-avaliação)
+
 
 # Objetivo
 Desenvolver um projeto para informatizar e controlar uma Pizzaria.
