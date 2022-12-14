@@ -1,0 +1,179 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// generator erd {
+//   provider = "prisma-erd-generator"
+// }
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model drink {
+  id            Int         @id @unique(map: "id") @default(autoincrement())
+  volume        Int
+  product_id    Int?
+  drink_type_id Int?
+  drink_type    drink_type? @relation(fields: [drink_type_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "FK_drink_type_drink")
+  product       product?    @relation(fields: [product_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "FK_product_drink")
+
+  @@index([drink_type_id], map: "FK_drink_type_drink")
+  @@index([product_id], map: "FK_product_drink")
+  @@map("tbl_drink")
+}
+
+model drink_type {
+  id     Int      @id @unique(map: "id") @default(autoincrement())
+  name   String   @db.VarChar(50)
+  status Boolean?
+  drink  drink[]
+
+  @@map("tbl_drink_type")
+}
+
+model message {
+  id        Int     @id @unique(map: "id") @default(autoincrement())
+  name      String  @db.VarChar(256)
+  email     String  @db.VarChar(256)
+  phone     String  @db.VarChar(13)
+  cellphone String  @db.VarChar(15)
+  critica   Boolean
+  content   String  @db.Text
+
+  @@map("tbl_message")
+}
+
+model picture {
+  id                   Int                    @id @unique(map: "id") @default(autoincrement())
+  picture_link         String?                @db.VarChar(256)
+  tbl_product_pictures tbl_product_pictures[]
+
+  @@map("tbl_picture")
+}
+
+model pizza {
+  id               Int                @id @unique(map: "id") @default(autoincrement())
+  product_id       Int?
+  pizza_type_id    Int?
+  pizza_type       pizza_type?        @relation("tbl_pizza_tbl_pizza_type", fields: [pizza_type_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "FK_pizza_type_pizza")
+  product          product?           @relation("tbl_pizzaTotbl_product", fields: [product_id], references: [id], onDelete: Cascade, onUpdate: Restrict, map: "FK_product_pizza")
+  pizza_ingredient pizza_ingredient[]
+  pizza_stuffing   pizza_stuffing[]
+
+  @@index([pizza_type_id], map: "FK_pizza_type_pizza")
+  @@index([product_id], map: "FK_product_pizza")
+  @@map("tbl_pizza")
+}
+
+model pizza_ingredient {
+  id            Int             @id @unique(map: "id") @default(autoincrement())
+  ingredient_id Int?
+  pizza_id      Int?
+  ingredient    tbl_ingredient? @relation("ingredientTopizza_ingredient", fields: [ingredient_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "FK_ingredient_pizza_ingredient")
+  pizza         pizza?          @relation(fields: [pizza_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "FK_pizza_pizza_ingredient")
+
+  @@index([ingredient_id], map: "FK_ingredient_pizza_ingredient")
+  @@index([pizza_id], map: "FK_pizza_pizza_ingredient")
+  @@map("tbl_pizza_ingredient")
+}
+
+model pizza_stuffing {
+  id          Int       @id @unique(map: "id") @default(autoincrement())
+  pizza_id    Int?
+  stuffing_id Int?
+  pizza       pizza?    @relation(fields: [pizza_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "FK_pizza_pizza_stugging")
+  stuffing    stuffing? @relation(fields: [stuffing_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "FK_stuffing_pizza_stugging")
+
+  @@index([pizza_id], map: "FK_pizza_pizza_stugging")
+  @@index([stuffing_id], map: "FK_stuffing_pizza_stugging")
+  @@map("tbl_pizza_stuffing")
+}
+
+model pizza_type {
+  id         Int      @id @unique(map: "id") @default(autoincrement())
+  name       String   @db.VarChar(50)
+  dimensions String   @db.VarChar(20)
+  status     Boolean?
+  pizza      pizza[]  @relation("tbl_pizza_tbl_pizza_type")
+
+  @@map("tbl_pizza_type")
+}
+
+model product {
+  id                   Int                    @id @unique(map: "id") @default(autoincrement())
+  name                 String?                @db.VarChar(256)
+  price                Decimal                @db.Decimal(10, 2)
+  likes                Int?
+  created_by           Int
+  status               Boolean?
+  category_id          Int?
+  tbl_category         tbl_category?          @relation("tbl_categoryTotbl_product", fields: [category_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "FK_category_product")
+  user                 user                   @relation("tbl_productTotbl_user", fields: [created_by], references: [id], onUpdate: Restrict, map: "FK_user_product")
+  drink                drink[]
+  pizza                pizza[]                @relation("tbl_pizzaTotbl_product")
+  tbl_product_pictures tbl_product_pictures[] @relation("tbl_productTotbl_product_pictures")
+  sale_off_products    sale_off_products[]
+
+  @@index([created_by], map: "FK_user_product")
+  @@index([category_id], map: "FK_category_product")
+  @@map("tbl_product")
+}
+
+model tbl_product_pictures {
+  id         Int      @id @default(autoincrement())
+  product_id Int?
+  picture_id Int?
+  picture    picture? @relation(fields: [picture_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "FK_picture_product_pictures")
+  product    product? @relation("tbl_productTotbl_product_pictures", fields: [product_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "FK_product_product_pictures")
+
+  @@index([picture_id], map: "FK_picture_product_pictures")
+  @@index([product_id], map: "FK_product_product_pictures")
+}
+
+model sale_off_products {
+  id         Int      @id @unique(map: "id") @default(autoincrement())
+  product_id Int?
+  off_value  Decimal? @db.Decimal(10, 2)
+  product    product? @relation(fields: [product_id], references: [id], onDelete: Restrict, onUpdate: Restrict, map: "FK_product_sale_off_products")
+
+  @@index([product_id], map: "FK_product_sale_off_products")
+  @@map("tbl_sale_off_products")
+}
+
+model stuffing {
+  id             Int              @id @unique(map: "id") @default(autoincrement())
+  name           String?          @db.VarChar(256)
+  status         Boolean?
+  pizza_stuffing pizza_stuffing[]
+
+  @@map("tbl_stuffing")
+}
+
+model user {
+  id              Int       @id @default(autoincrement())
+  name            String    @db.VarChar(256)
+  email           String    @db.VarChar(256)
+  cellphone       String    @db.VarChar(15)
+  profile_picture String?   @db.VarChar(256)
+  password        String    @db.VarChar(256)
+  isAdmin         Boolean
+  product         product[] @relation("tbl_productTotbl_user")
+
+  @@unique([email, id], map: "email")
+  @@map("tbl_user")
+}
+
+model tbl_ingredient {
+  id               Int                @id @unique(map: "id") @default(autoincrement())
+  name             String             @db.VarChar(30)
+  pizza_ingredient pizza_ingredient[] @relation("ingredientTopizza_ingredient")
+}
+
+model tbl_category {
+  id      Int       @id @unique(map: "id") @default(autoincrement())
+  name    String    @db.VarChar(120)
+  status  Boolean?
+  product product[] @relation("tbl_categoryTotbl_product")
+}
