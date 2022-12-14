@@ -130,27 +130,27 @@ Para entregar o seu projeto você deverá criar um Pull Request deste repositór
 - [ ] O projeto deverá ser publicado.
 
 ## Front-end
-- [ ] Prototipou o site, no figma, conforme requisitos do cliente?
-- [ ] Criou o site seguinto o planejado?
-- [ ] O site é responsivo?
-- [ ] Os produtos são carregado no site dinamicamente?
-- [ ] O formulário está validando os campos?
-- [ ] O formulário faz o envio para o servidor back-end?
+- [✅] Prototipou o site, no figma, conforme requisitos do cliente?
+- [✅] Criou o site seguinto o planejado?
+- [✅] O site é responsivo?
+- [✅] Os produtos são carregado no site dinamicamente?
+- [✅] O formulário está validando os campos?
+- [✅] O formulário faz o envio para o servidor back-end?
 - [ ] O site foi publicado?
-- [ ] Todas as telas do CMS foram prototipadas?
-- [ ] As telas foram criadas conforme planejado?
-- [ ] A tela de produtos implementa todos os métodos HTTP (get, post, put e delete)?
+- [✅] Todas as telas do CMS foram prototipadas?
+- [✅] As telas foram criadas conforme planejado?
+- [‼️] A tela de produtos implementa todos os métodos HTTP (get, post, put e delete)?
 - [ ] A tela de categorias implementa todos os métodos HTTP?
-- [ ] A tela de usuários implementa todos os métodos HTTP?
+- [✅] A tela de usuários implementa todos os métodos HTTP?
 - [ ] A tela de contados implementa os métodos HTTP get e delete?
-- [ ] A tela de login faz autenticação utilizando o JWT?
+- [✅] A tela de login faz autenticação utilizando o JWT?
 - [ ] O CMS foi publicado?
 
 
 ## Back-end
-- [ ] Deverá ser criada toda a documentação dos EndPoints da API do projeto utilizando Swagger.
-- [ ] A estrutura do projeto deverá obedecer ao padrão de projeto MVC, para facilitar o processo de documentação e manutenção do projeto.
-- [ ] Todos os EndPoints deverão estar funcionando no PostMan para testes e validação.
+- [✅] Deverá ser criada toda a documentação dos EndPoints da API do projeto utilizando Swagger.
+- [✅] A estrutura do projeto deverá obedecer ao padrão de projeto MVC, para facilitar o processo de documentação e manutenção do projeto.
+- [✅] Todos os EndPoints deverão estar funcionando no PostMan para testes e validação.
 - [ ] O projeto deverá ser publicado.
 
 ---
