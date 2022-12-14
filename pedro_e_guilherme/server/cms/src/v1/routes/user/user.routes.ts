@@ -1,5 +1,5 @@
 import { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
-import { UserController } from "../../controllers/";
+import { UserController } from "../../controllers";
 import User from "../../models/User";
 import { createUserOptions, loginOptions } from "./user.schema";
 import bcryptjs from 'bcryptjs';
@@ -35,7 +35,7 @@ export default async function userRoutes(server: FastifyInstance) {
 
       const user = await User.getUserByEmail(email);
 
-        
+
       if (user.length <= 0) {
         return rep.status(404).send({
           code: 404,
@@ -80,4 +80,4 @@ export default async function userRoutes(server: FastifyInstance) {
     { onRequest: [server.authenticate] },
     UserController.update
   );
-} 
+}

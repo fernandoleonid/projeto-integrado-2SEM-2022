@@ -14,6 +14,6 @@
       "resolveJsonModule": true
   },
   "include": [
-      "./src/v1"
+    "./src/v1"
   ]
 }

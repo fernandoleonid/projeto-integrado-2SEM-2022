@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "lint": "eslint . --ext .ts",
-    "dev": "tsx watch ./src/www/server.ts",
-    "start": "nodemon ./bin/www/server.js",
+    "lint": "eslint  --ext .ts",
+    "dev": "tsx watch src/www/server.ts",
+    "start": "nodemon bin/www/server.js",
     "seed": "tsx prisma/seed.ts",
     "build": "tsc",
     "build::netlify": "npx netlify-lambda build functions --config ./webpack.config.netlify.js",
