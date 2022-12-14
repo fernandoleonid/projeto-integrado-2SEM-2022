@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <title>Pizza Paradiso - CMS</title>
+
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/e2a54895da.js"></script>
+    <link href="../../assets/css/register_styles/styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script defer src="../../js/utils/register.js" type="module"></script>
+    <script>
+        const fetchIngredients = async () => {
+            const {data} = await axios.get(`https://pizza-cms-api.netlify.app/.netlify/functions/server/ingredient`, {headers: {common: {Authorization: `Bearer ${localStorage.getItem('access_token')}`}}});
+            console.log(data);
+            const ingredientsDiv = document.querySelector('.outer-box li');
+
+            data.payload.forEach((ingredient) => {
+                const div = document.createElement('div');
+                div.classList.add('ingredient-box');
+                const input = document.createElement('input');
+                input.classList.add('ingredient-box');
+                input.type = 'checkbox';
+                input.name = 'ingredient';
+                input.id = ingredient.id;
+                input.value = ingredient.name;
+                const label = document.createElement('label');
+                label.htmlFor = ingredient.id;
+                label.textContent = ingredient.name;
+
+                div.appendChild(input);
+                div.appendChild(label);
+                ingredientsDiv.appendChild(div);
+            });
+        };
+
+        const changeIngredientsDiv = async (type) => {
+            const ingredientsDiv = document.querySelector('.outer-box');
+            if (type === 'bebida') {
+                ingredientsDiv.innerHTML = `<input name="volume" class="input-string" type="number" step="150" max="2500" min="150" placeholder="Volume (ml)">`
+            } else {
+                ingredientsDiv.innerHTML = `<span class="title_ingredients">Ingredientes</span>
+                                                        <li style="margin-top: 10px; min-width: 20vw;">
+
+</li>
+                                                        `;
+                await fetchIngredients();
+            }
+        }
+
+        const fetchTypes = async (categoryInput, divToAppend) => {
+            const inputName_Stuffing = document.querySelector(`input[name="stuffing"]`) || document.querySelector('input[name="name"]');
+            try {
+                if (divToAppend.lastElementChild) {
+                    divToAppend.innerHTML = '';
+                }
+                
+                let typeSelected = categoryInput.value.toLowerCase();
+                changeIngredientsDiv(typeSelected);
+
+                inputName_Stuffing.name = 'stuffing';
+                inputName_Stuffing.placeholder = 'Recheio';
+
+                if (typeSelected.includes("bebida")) {
+                    typeSelected = "drink";
+                    inputName_Stuffing.name = 'name';
+                    inputName_Stuffing.placeholder = 'Nome'
+                }
+                const {data} = await axios.get(`https://pizza-cms-api.netlify.app/.netlify/functions/server/${typeSelected}/types`, {headers: {common: {Authorization: `Bearer ${localStorage.getItem('access_token')}`}}});
+
+                data.payload.forEach((type) => {
+                    const option = document.createElement('option');
+                    option.value = type.name;
+                    option.textContent = type.name;
+
+                    divToAppend.appendChild(option);
+                });
+            } catch (e) {
+                console.log(e);
+            }
+        };
+
+    </script>
+</head>
+<body>
+<header class="header">
+    <img alt="logo da empresa" src="../../../assets/img/Logo.png">
+</header>
+<main>
+    <div class="main__menu-select">
+        <div class="user">
+            <input checked id="new_user_option" name="option" type="radio" value="new_user"/>
+            <label for="new_user_option">Usuário</label>
+        </div>
+        <span class="line"></span>
+        <div class="product">
+            <input id="new_product_option" name="option" type="radio" value="new_product"/>
+            <label for="new_product_option">Produto</label>
+        </div>
+    </div>
+    <div class="main__form">
+        <form class="main__form__form" method="POST">
+            <fieldset>
+                <input class="input-string" name="name" placeholder="Name" type="text">
+                <input class="input-string" name="email" placeholder="E-mail" type="email">
+                <input class="input-string" name="cellphone" placeholder="Telefone" type="tel">
+                <input class="input-string" name="password" placeholder="Password" type="password">
+            </fieldset>
+            <label class="file" for="imagem">
+                <i class="fa-regular fa-user"></i>
+            </label>
+            <input id="imagem" name="profile_picture" type="file">
+
+        </form>
+    </div>
+    <button class="button_cadastro" type="button">Cadastrar</button>
+</main>
+</body>
+</html>

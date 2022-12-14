@@ -1,0 +1,112 @@
+@media (max-width: 680px) {
+    .main-banner__description {
+        display: none;
+    }
+
+    main {
+        padding: 10px 20px;
+    }
+
+    .header__buttons {
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        background: #000;
+        z-index: 99;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .header img {
+        height: auto !important;
+    }
+
+    .main-banner {
+        width: 100%;
+    }
+
+    .services__cards-container {
+        width: 100%;
+    }
+
+    .services__card {
+        width: 100%;
+    }
+
+    .fa-truck {
+        font-size: 60px;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .grid-foods {
+        width: 100%;
+        overflow-x: hidden;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .contact-form__option {
+        width: 100%;
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .contact-form__option label {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        height: auto;
+        padding: 20px 0px;
+        max-width: 100%;
+    }
+
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .main-container-login {
+        width: 100%;
+    }
+
+    .grid-content {
+        justify-content: center;
+        margin: 0;
+    }
+
+    .grid-content__main-container {
+        width: 100%;
+    }
+
+    .main__menu-select {
+        width: 100% !important;
+    }
+
+    .main__form {
+        width: 100% !important;
+    }
+
+    .table-products {
+        display: none;
+        max-width: none;
+        width: 100%;
+    }
+
+    .grid-content__insights-container {
+        max-height: 54vh;
+    }
+
+    .dash-header {
+        padding: 10px 20px;
+    }
+}

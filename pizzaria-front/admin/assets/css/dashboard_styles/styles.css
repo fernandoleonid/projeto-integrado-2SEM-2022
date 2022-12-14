@@ -1,0 +1,13 @@
+@import url(../../../../assets/css/colors.css);
+@import url(../../../../assets/css/components/scrollbar.css);
+@import url(../../../../assets/css/reset.css);
+@import url(header_dashboard.css);
+@import url(main_dashboard.css);
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--bg-color);
+    max-height: 100vh;
+    overflow: hidden;
+}
+
