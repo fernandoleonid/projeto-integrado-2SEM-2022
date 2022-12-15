@@ -1,0 +1,125 @@
+openapi: 3.0.3
+info:
+  title: Pizzaria Senailicious - Open source API
+  description: |-
+   Api destinada a controle de produtos para uma pizzaria fictícia, na qual possui processamento de CRUD para cada tabela no banco
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: matheus.alvesdoliveira06@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: http://localhost:8080
+paths:
+  /v1/pizzas:
+    get:
+      tags:
+        - Pizza
+      summary: Retorna todos as pizzas
+      description: Retorna todos as pizzas registradas no sistema
+      responses:
+        '200':
+          description: Sucesso
+        '404':
+          description: Não foram achados registros no banco
+  /v1/pizza/{id}:
+    get:
+      tags:
+        - Pizza
+      summary: Retorna uma pizza pelo id
+      description: Listagem de uma pizza específica registrada no sistema
+      parameters:
+        - name: id
+          in: path
+          description: ID do produto para listar as informações dele
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: Sucesso
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/pizza'
+        '400':
+          description: O id do registro é obrigatório neste tipo de requisição
+        '404':
+          description: Não foram encontrados registros no Banco de Dados.
+  /v1/mensagem:
+    post:
+      tags:
+        - Mensagem
+      summary: Insere uma mensagem no banco
+      description: Inserir uma nova mensagem no banco
+      requestBody:
+        description: Inserir uma mensagem no banco
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/mensagem'
+      responses:
+        '201':
+          description: Mensagem enviada
+        '400':
+          description: Body da requisição vazio
+        '415':
+          description: Content Type errado
+components:
+  schemas:
+    pizza:
+      required:
+        - nome
+        - tipo
+      type: object
+      properties:
+        id:
+          type: integer
+        nome:
+          type: string
+        imagem:
+          type: string
+        tamanho:
+          type: string
+        preco:
+          type: number
+        desconto:
+          type: number
+        tipo:
+          type: object
+          properties:
+            id:
+              type: number
+            nome:
+              type: string
+    mensagem:
+      required:
+        - nome
+        - email
+        - celular
+        - mensagem
+        - tipo_mensagem
+      type: object
+      properties: 
+        id:
+          type: integer
+        nome:
+          type: string
+        email:
+          type: string
+        telefone:
+          type: string
+        celular:
+          type: string
+        mensagem:
+          type: string
+        id_tipo_mensagem:
+          type: integer

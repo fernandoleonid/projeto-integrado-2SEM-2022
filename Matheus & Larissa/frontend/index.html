@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizzaria Senailicious</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/pizzaria-logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&family=Mulish:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d374dd1618.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/main.js" defer type="module"></script>
+  </head>
+  <body>
+    <span class="menu-burger"> </span>
+    <main>
+      <section id="home">
+        <header>
+          <a href="#home">
+            <img src="./assets/img/pizzaria-logo.png" alt="Logo da Pizzaria" />
+          </a>
+          <nav>
+            <a href="#home" class="nav-item active">Home</a>
+            <a href="#discount-section" class="nav-item">Promoções</a>
+            <a href="#products" class="nav-item">Cardápio</a>
+            <a href="#services" class="nav-item">Serviços</a>
+            <a href="#contact-us" class="nav-item">Contate-nos</a>
+          </nav>
+        </header>
+        <div class="content-container">
+          <div class="right-side-content">
+            <div class="text-container">
+              <h1 class="slogan-title">
+                As melhores <span class="text-yellow">Pizzas</span> e
+                <span class="text-orange">Bebidas</span> de São Paulo.
+              </h1>
+              <p class="subtitle">
+                Acesse o nosso cardápio para ver os produtos disponíveis.
+              </p>
+            </div>
+            <a href="#main-content" class="main-button">Ver Produtos</a>
+          </div>
+        </div>
+      </section>
+      <section id="main-content">
+        <h2 class="section-title" id="discount-section">Promoções</h2>
+        <div class="discount-container">
+          <div class="discount-items-container">
+            <product-card
+              name="calabresa"
+              price="12.87"
+              photo="https://t2.rg.ltmcdn.com/pt/posts/9/8/3/pizza_calabresa_e_mussarela_4389_600.jpg"
+              type="pizza"
+            ></product-card>
+          </div>
+        </div>
+        <nav class="products-nav" id="products">
+          <h2 class="section-title">Cardápio</h2>
+        </nav>
+        <div class="products-types-container">
+          <div class="product-type" id="favorites">Pizzas Favoritas</div>
+          <div class="product-type selected" id="pizzas">Pizzas</div>
+          <div class="product-type" id="drinks">Bebidas</div>
+        </div>
+        <div class="type-infos">
+          <span class="product-type-title" id="chosen-product-type"
+            >Pizzas</span
+          >
+        </div>
+        <div class="menu-items-container">
+          <product-card
+            name="calabresa"
+            price="12.87"
+            photo="https://t2.rg.ltmcdn.com/pt/posts/9/8/3/pizza_calabresa_e_mussarela_4389_600.jpg"
+            type="pizza"
+          ></product-card>
+        </div>
+      </section>
+      <section id="services">
+        <header>
+          <h2 class="section-title">Serviços</h2>
+          <nav>
+            <a href="#home" class="nav-item">Home</a>
+            <a href="#discount-section" class="nav-item">Promoções</a>
+            <a href="#products" class="nav-item">Cardápio</a>
+            <a href="#services" class="nav-item active">Serviços</a>
+            <a href="#contact-us" class="nav-item">Contate-nos</a>
+          </nav>
+        </header>
+        <div class="services-container">
+          <div class="service-card">
+            <img
+              src="./assets/img/delivery-biker-icon.png"
+              alt="Entregador"
+              class="service-image"
+            />
+            <span class="service-name">Delivery</span>
+          </div>
+          <div class="service-card">
+            <img
+              src="./assets/img/pizza-carvery-icon.png"
+              alt="Rodízio de Pizza"
+              class="service-image"
+            />
+            <span class="service-name">Rodízio</span>
+          </div>
+        </div>
+      </section>
+      <section id="contact-us">
+        <header>
+          <h2 class="section-title">Contate-nos</h2>
+          <nav>
+            <a href="#home" class="nav-item">Home</a>
+            <a href="#discount-section" class="nav-item">Promoções</a>
+            <a href="#products" class="nav-item">Cardápio</a>
+            <a href="#services" class="nav-item">Serviços</a>
+            <a href="#contact-us" class="nav-item active">Contate-nos</a>
+          </nav>
+        </header>
+        <div class="contact-container">
+          <div class="message-before-container">
+            <p class="contact-us-message">
+              Para nos sugerir <span class="text-yellow">mudanças</span> ou
+              dirigir <span class="text-yellow">elogios</span>, contate-nos
+              preenchendo os campos a seguir
+            </p>
+          </div>
+          <form id="contact-us-form">
+            <label for="contact-name">Nome</label>
+            <input
+              type="text"
+              name="contact-name"
+              id="contact-name"
+              class="form-input"
+              required
+            />
+            <div class="input-group">
+              <div class="input-infos">
+                <label for="contact-cellphone-number">Celular</label>
+                <input
+                  type="tel"
+                  name="cellphone-number"
+                  id="contact-cellphone-number"
+                  class="form-input"
+                  required
+                />
+              </div>
+              <div class="input-infos">
+                <label for="contact-phone-number">Telefone</label>
+                <input
+                  type="tel"
+                  name="phone-number"
+                  id="contact-phone-number"
+                  class="form-input"
+                />
+              </div>
+            </div>
+            <label for="contact-email">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="contact-email"
+              class="form-input"
+              required
+            />
+            <label>Tipo de mensagem</label>
+            <div class="message-type-container">
+              <div class="message-type">
+                <input type="radio" name="message-type" id="critic" required />
+                <label for="critic" class="message-type-label">Crítica</label>
+              </div>
+              <div class="message-type">
+                <input
+                  type="radio"
+                  name="message-type"
+                  id="sugestion"
+                  required
+                />
+                <label for="sugestion" class="message-type-label"
+                  >Sugestão</label
+                >
+              </div>
+            </div>
+            <label for="message">Mensagem</label>
+            <textarea
+              name="message"
+              id="message"
+              class="form-input"
+              required
+            ></textarea>
+            <button
+              class="submit-button"
+              type="button"
+              id="message-submit-button"
+            >
+              Enviar
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <a href="#home" id="back-to-top-button"
+      ><i class="fa-solid fa-arrow-up"></i
+    ></a>
+    <footer>
+      <div class="upper-footer-content">
+        <ul class="social-icons-container">
+          <a href="#"><li class="social-icon"><i class="fa-brands fa-instagram"></i></li></a>
+          <a href="#"><li class="social-icon"><i class="fa-brands fa-facebook-f"></i></li></a>
+          <a href="#"><li class="social-icon"><i class="fa-brands fa-whatsapp"></i></li></a>
+          <a href="#"><li class="social-icon"><i class="fa-brands fa-linkedin-in"></i></li></a>
+        </ul>
+        <img
+          src="./assets/img/pizzaria-logo.png"
+          alt="Logo"
+          class="footer-logo"
+        />
+        <ul class="form-payment-logos">
+          <li class="payment-logo">
+            <img src="./assets/img/visa-logo.png" alt="Logo da Visa" />
+          </li>
+          <li class="payment-logo">
+            <img
+              src="./assets/img/mastercard-logo.png"
+              alt="Logo do Mastercard"
+            />
+          </li>
+          <li class="payment-logo">
+            <img src="./assets/img/paypal-logo.png" alt="Logo do Paypal" />
+          </li>
+        </ul>
+      </div>
+      <div class="middle-footer-content">
+        <div class="pizzeria-info">
+          <span class="info-title">E-mail</span>
+          <i class="fa-solid fa-envelope"></i>
+          <span class="info-text">pizzaria.senailicious@gmail.com</span>
+        </div>
+        <div class="pizzeria-info">
+          <span class="info-title">Telefone</span>
+          <i class="fa-solid fa-phone"></i>
+          <span class="info-text">+55 11 1110-2315</span>
+        </div>
+        <div class="pizzeria-info">
+          <span class="info-title">Endereço</span>
+          <i class="fa-solid fa-location-dot"></i>
+          <span class="info-text">Av. Luis Carlos Berrini, nº 666</span>
+        </div>
+      </div>
+      <div class="bottom-footer-content">
+        <span class="copyright-message"
+          >Copyright © 2022 | <span class="text-orange">SDD Code</span>. Todos
+          os direitos reservados.</span
+        >
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+@import url(../../assets/css/reset.css);
+@import url(../../assets/css/root.css);
+
+@import url(../../assets/css/components/submit-button.css);
+@import url(./components/background-pizza.css);
+
+body {
+  background: #121212;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Inter';
+}
+
+.login-container {
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: rgba(255, 255, 255, 0.5) solid 1px;
+  width: 60%;
+  min-width: 400px;
+  min-height: 50vh;
+  height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  padding: 4.5rem;
+  border-radius: 20px;
+  gap: 3rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-container,
+.input-container input {
+  width: 100%;
+}
+
+.input-container label {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+
+.input-container input {
+  background: none;
+  border-bottom: 3px solid #aaaaaa;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-top: 1.5rem;
+}
+
+.input-container input::placeholder {
+  color: #aaaaaa;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(-10px);
+  }
+  25% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS Login - Pizzaria Senailicious</title>
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;700&family=Mulish:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./js/login.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="../assets/img/pizzaria-logo.png" alt="Logo da pizaria" />
+    </header>
+    <form class="login-container">
+      <div class="input-container">
+        <label for="admin-email-input">E-mail</label>
+        <input
+          type="email"
+          name="input-email"
+          id="admin-email-input"
+          placeholder="Insira o E-mail"
+          required
+        />
+      </div>
+      <div class="input-container">
+        <label for="admin-password-input">Senha</label>
+        <input
+          type="password"
+          name="input-password"
+          id="admin-password-input"
+          placeholder="Insira a senha"
+          required
+        />
+      </div>
+      <button type="button" id="admin-login-submit-button" class="submit-button bg-red-700">Entrar</button>
+    </form>
+    <img
+      src="./img/pizza-background.png"
+      alt="Pizza"
+      class="background-pizza"
+    />
+  </body>
+</html>

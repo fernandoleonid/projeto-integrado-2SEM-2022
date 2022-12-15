@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS Home - Pizzaria Senailicious</title>
+    <link rel="stylesheet" href="./css/home.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/home.js" defer type="module"></script>
+    <script src="https://kit.fontawesome.com/d374dd1618.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <a href="./cms-home.html" class="pizzaria-logo">
+        <img src="../assets/img/pizzaria-logo.png" alt="Logo da Pizzaria" />
+      </a>
+      <nav>
+        <a href="./cms-new-product.html" class="cms-button">Novo Produto</a>
+        <a href="./cms-new-admin.html" class="cms-button"
+          >Cadastrar Administrador</a
+        >
+        <a href="./index.html" class="cms-button">Sair</a>
+        <div class="admin-profile">
+          <div class="profile-photo">
+            <img src="./img/user.png" alt="Foto de perfil" id="admin-photo" />
+          </div>
+          <span class="admin-name" id="admin-name">Nome admin</span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <table class="products-table">
+        <tr class="column-names">
+          <th>Tipo</th>
+          <th>Nome</th>
+          <th>Tamanho</th>
+          <th>Ingredientes</th>
+          <th>Preço</th>
+          <th>Foto</th>
+        </tr>
+        <!-- <tr class="product-row">
+          <td>Pizza</td>
+          <td>Calabresa</td>
+          <td>Grande</td>
+          <td>Calabresa, queijo, catupiry</td>
+          <td>R$30,90</td>
+          <td>
+            <img
+              src="./img/pizza-background.png"
+              alt="Pizza"
+              class="product-img"
+            />
+          </td>
+        </tr> -->
+      </table>
+    </main>
+    <div class="delete-button"><i class="fa-solid fa-trash"></i></div>
+    <img
+      src="./img/pizza-background.png"
+      alt="Pizza"
+      class="background-pizza"
+    />
+  </body>
+</html>

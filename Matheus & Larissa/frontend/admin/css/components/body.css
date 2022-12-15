@@ -1,0 +1,13 @@
+body {
+  background: #121212;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 1.5rem 3rem;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+}

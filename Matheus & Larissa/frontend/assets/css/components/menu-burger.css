@@ -1,0 +1,40 @@
+/* .menu-burger {
+  background-color: #fff;
+  width: 3rem;
+  height: 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+} */
+
+@media (max-width: 768px) {
+  .menu-burger {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: block;
+    width: 3rem;
+    height: 0.5rem;
+  }
+
+  /* .menu-burger::after,
+  .menu-burger::before {
+    content: '';
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    height: 0.5rem;
+    position: absolute;
+    z-index: 999;
+  }
+  
+  .menu-burger::after {
+    transform: translateY(-1rem);
+  }
+  
+  .menu-burger::before {
+    transform: translateY(1rem);
+  } */
+
+}

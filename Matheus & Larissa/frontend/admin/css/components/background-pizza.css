@@ -1,0 +1,5 @@
+.background-pizza {
+  position: absolute;
+  z-index: -1;
+  bottom: 1.5rem;
+}

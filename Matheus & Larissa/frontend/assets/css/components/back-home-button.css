@@ -1,0 +1,21 @@
+#back-to-top-button {
+  position: fixed;
+  right: 48px;
+  bottom: 12px;
+  background-color: var(--yellow-500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 25px 5px;
+  transition: all 400ms ease;
+  z-index: 999;
+}
+
+#back-to-top-button:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 25px 15px;
+}

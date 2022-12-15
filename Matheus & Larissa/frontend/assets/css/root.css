@@ -1,0 +1,19 @@
+:root {
+  --yellow-200: #f2c97b;
+  --yellow-500: #f6aa1c;
+  --yellow-700: #e88f09;
+  --orange-500: #bc3908;
+  --red-500: #ea1313;
+  --red-700: #941b0c;
+  --black-500: #121212;
+  --white-100: #bbbbbb;
+  --white-500: #ffffff;
+}
+
+.text-yellow {
+  color: var(--yellow-500);
+}
+
+.text-orange {
+  color: var(--orange-500);
+}
