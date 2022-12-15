@@ -20,18 +20,18 @@
 ### WEB
 
 - Client version
-  ![Home](./github/img/home.png)
-  ![Menu](./github/img/discount-products.png)
+  ![Home](./github-img/home.png)
+  ![Menu](./github-img/discount-products.png)
   ![Footer](./github/img/footer.png)
 - Dashboard - Admin version
-  ![CMS Login](./github/img/cms-login.png)
-  ![CMS Home](./github/img/cms-home.png)
-  ![CMS Product register](./github/img/cms-new-product.png)
-  ![CMS Admin register](./github/img/cms-new-admin.png)
+  ![CMS Login](./github-img/cms-login.png)
+  ![CMS Home](./github-img/cms-home.png)
+  ![CMS Product register](./github-img/cms-new-product.png)
+  ![CMS Admin register](./github-img/cms-new-admin.png)
 
 ### Mobile
 
 - Client version
-  ![Home](./github/img/home_mobile.png)
-  ![Menu](./github/img/menu-mobile.png)
-  ![Contact us](./github/img/contact-mobile.png)
+  ![Home](./github-img/home_mobile.png)
+  ![Menu](./github-img/menu-mobile.png)
+  ![Contact us](./github-img/contact-mobile.png)

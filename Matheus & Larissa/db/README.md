@@ -5,4 +5,4 @@
 
 ### Modelo lógico
 
-![Modelo logico](./github/img/modelo_logico.png)
+![Modelo logico](./github-img/modelo_logico.png)
