@@ -1,0 +1,700 @@
+
+html{
+    scroll-behavior: smooth;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.text-logo{
+    font-size: 24px;
+    letter-spacing: 4px;
+
+}
+
+.img-logo{
+    display: flex;
+    height: 115px;
+    width: 150px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;
+    padding-left: 5%;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    background-color: #FF2727;
+    text-transform: uppercase;
+    height: 13vh;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+section{
+    height: 100vh;
+}
+
+
+/********* HEADER MOBILE *********/
+
+/* .mobile-menu{
+    display: flex;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+
+   */
+
+/********* SECTIONS *********/
+
+/**************************************************** APRESENTAÇÃO ****************************************************/
+/*
+
+TODOS OS COMPONENTES DE APRESENTAÇÃO
+
+*/
+
+.container-apresentacao{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0.01%, rgba(0, 0, 0, 0) 100%), url("../assents/img/img-section-apresentacao.jpg") no-repeat ;
+    background-size: cover;
+    height: 100vh;
+}
+
+.text-welcome{
+    display: flex;
+    font-size: 42px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding-left: 5%;
+    text-transform: uppercase;
+    margin-top: 15%;
+}
+
+.laPizzaria{
+    display: flex;
+    font-size: 35px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    padding-left: 5%;
+    line-height: 60px;
+}
+
+.container-apresentacao p{
+    display: flex;
+    width: 50vh;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 35px;
+    padding-left: 5%;
+    text-align: center;
+}
+
+.text-apresentacao{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-apresentacao p{
+    width: 450px;
+}
+
+.text-green{
+    color: green;
+}
+
+.text-red{
+    color: #FF2727;
+}
+
+/**************************************************** PROMOÇÃO ****************************************************/
+/*
+
+TODOS OS COMPONENTES DE PROMOÇÃO
+
+*/
+
+.title-promo{
+    display: flex;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    height: 90px;
+    text-align: start;
+    margin-left: 90px;
+
+}
+
+.componentes-promo{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-promocao{
+    background-color: #EBE7DB;
+}
+
+.card__pizza{
+    display: flex;
+    height: 350px;
+    width: 290px;
+    flex-direction: column;
+    margin-left: 90px;
+    gap: 5px;
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-pizza img{
+    display: flex;
+    border-radius: 5px 5px 0px 0px;
+    height: auto;
+}
+
+.card-pizza h1{
+    color: #000;
+    margin-left: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.card-descricao{
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.price{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 300
+}
+
+.container-price{
+    display: flex;
+    background-color: #FF2727;
+    width: max-content;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+/**************************************************** FAVORITAS ****************************************************/
+.title-fav{
+    display: flex;
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    height: 90px;
+    text-align: start;
+    margin-left: 90px;
+    margin-top: 30px;
+}
+
+/**************************************************** CARDÁPIO ****************************************************/
+/*
+
+TODOS OS COMPONENTES DE CARDÁPIO
+
+*/
+
+.container-cardapio{
+    min-height: 100vh;
+}
+
+.title-cardapio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 100px;
+}
+
+.line-cardapio1{
+    display: flex;
+    width: 480px;
+    height: 0px;
+    background-color: #000;
+    border: solid 1px #000;
+}
+
+.grid-traditional, .grid-doces {
+    display: grid;
+    width: 100%;
+    gap: 10px;
+    justify-items: center;
+    column-gap: 50px;
+    grid-template-areas: 
+    'imagem component component'
+    'imagem component component'
+    'component component component';
+}
+
+.grid-doces {
+    grid-template-areas: 
+    'component component component'
+    'component component imagem'
+    'component component imagem';
+}
+
+.elipse1{
+    height: 30px;
+    width: 30px;
+    border: solid 2px #000;
+    border-radius: 50%;
+}
+
+.elipse2{
+    height: 30px;
+    width: 30px;
+    border: solid 2px #000;
+    border-radius: 50%;
+}
+
+.elipse3{
+    height: 40vh;
+    width: 40vh;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    grid-area: imagem;
+    border-radius: 50%;
+    filter: drop-shadow(-10px 4px 0px rgba(0, 0, 0, 0.25)) drop-shadow(-20px 10px 0px rgba(0, 0, 0, 0.1));
+    background: url('../assents/img/delicious-neapolitan-meat-pizza-pizzeria-delicious-food.jpg') center center;
+    background-size: cover;
+}
+
+.elipse4{
+    height: 40vh;
+    width: 40vh;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    grid-area: imagem;
+    border-radius: 50%;
+    filter: drop-shadow(-15px 4px 0px rgba(0, 0, 0, 0.25)) drop-shadow(-30px 20px 0px rgba(0, 0, 0, 0.1));
+    background: url('../assents/img/delicious-neapolitan-meat-pizza-pizzeria-delicious-food.jpg') center center;
+    background-size: cover;
+}
+
+
+
+.line-cardapio2{
+    display: flex;
+    width: 480px;
+    height: 0px;
+    border: solid 1px #000;
+}
+
+.text-cardapio{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+/* SERVIÇOS */
+
+.container-servicos{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    align-items: flex-end;
+}
+
+/* .servico{
+    display: flex;
+    height: 400px;
+    width: 100%;
+    background-color: violet;
+} */
+
+/****** CONTAINER FUNCIONAMENTO ******/
+
+.container-como_funciona{
+    display: flex;
+    height: 225px;
+    width: 100%;
+    background-color: #FFF;
+    justify-content: space-around;
+}
+
+.passo-um{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-passo-um{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #B9B9B9;
+}
+
+.passo-dois{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-passo-dois{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #B9B9B9;
+}
+
+.passo-tres{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-passo-tres{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #B9B9B9;
+}
+
+.passo-quatro{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text-passo-quatro{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #B9B9B9;
+}
+
+/**************************************************** CONTATO ****************************************************/
+
+.container-contato{
+    display: flex;
+    background: url('../assents/img/back-contact.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato{
+    display: flex;
+    height: 600px;
+    width: 500px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-contato{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.entre-contato{
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    margin-top: 8%;
+}
+
+.atendelo-contato{
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.inputs-contato{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+    align-items: center;
+}
+
+.nome-contato{
+    height: 40px;
+    width: 300px;
+}
+
+.email-contato{
+    height: 40px;
+    width: 300px;
+}
+
+.celular-contato{
+    height: 40px;
+    width: 300px;
+}
+
+.telefone-contato{
+    height: 40px;
+    width: 300px;
+}
+
+.input-checkbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.checkbox input{
+    height: 30px;
+    width: 30px;
+}
+
+.text-input{
+    text-transform: uppercase;
+}
+
+.input-message{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.mensagem{
+    height: 150px;
+    width: 300px;
+}
+
+input{
+    font-family: 'Inter', sans-serif;
+    left: 10px;
+}
+
+/**************************************************** FOOTER ****************************************************/
+
+footer{
+    display: flex;
+    height: 220px;
+    background-color: #FF2727;
+    padding: 30px;
+    align-items: center;
+    
+}
+
+.footer-pizzaria{
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+}
+
+.title-footer{
+    width: 50px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.cardapio-footer{
+    display: flex;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.sobre-footer{
+    display: flex;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.atendimento-footer{
+    display: flex;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.localizacao-footer{
+    display: flex;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+/********* BACK TO TOP *********/
+
+.button-backtop{
+    display: flex;
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    bottom: 50px;
+    right: 30px;
+    border-radius: 50px;
+    background-color: #EBE7DB;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF2727;
+    transition-duration: 0.4s;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.button-backtop:hover{
+    background-color: #000;
+}
+
+.button-backtop i {
+    color: #000;
+}
+
+.button-backtop:hover i {
+    color: #FF2727;
+}
+
+/* teste */
+
+.card{
+    display: flex;
+    height: 150px;
+    width: 600px;
+    background-color: #EBE7DB;
+    padding: 10px;
+    gap: 15px;
+    align-items: center;
+    margin-left: 40px;
+    padding-left: 25px;
+}
+
+.text__pizza{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.title__pizza{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.descr__pizza{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+}
+
+.price__pizza{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-family: 'Inter', sans-serif;
+}
+
+.container-promocao{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    align-items: center;
+}
+
+/* teste card promo*/
+.card-pizza{
+    display: flex;
+    height: 350px;
+    width: 290px;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-pizza img{
+    display: flex;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.card-pizza h1{
+    color: #000;
+    margin-left: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.card-descricao{
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.price{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 300
+}
+
+.container-price{
+    display: flex;
+    background-color: #FF2727;
+    width: max-content;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+
+.container-cards{
+    display: flex;
+    
+}

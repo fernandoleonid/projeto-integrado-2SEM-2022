@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@prisma/client": "^4.7.1",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.18.2",
+    "netlify-lambda": "^2.0.15",
+    "prisma": "^4.7.1",
+    "serverless-http": "^3.1.0",
+    "webpack": "^4.20.2",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "npx netlify-lambda serve ./src -c ./webpack.config.js"
+    
+  },
+  "browser": { "fs": false, "path": false, "os": false, "net": false, "tls": false }
+}

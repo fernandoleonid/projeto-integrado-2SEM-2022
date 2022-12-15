@@ -1,0 +1,145 @@
+body{
+    background: url(../assents/img/eployee.jpg) no-repeat ;
+    background-size: cover;
+}
+
+
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/************ IMAGE INPUT ************/
+#picture__input {
+    display: none;
+  }
+  
+  .picture {
+    width: 200px;
+    height: 200px;
+    aspect-ratio: 16/9;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+  }
+  
+  .picture:hover {
+    color: #777;
+    background: #ccc;
+  }
+  
+  .picture:active {
+    border-color: turquoise;
+    color: turquoise;
+    background: #eee;
+  }
+  
+  .picture:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .picture__img {
+    max-width: 100%;
+  }
+  
+.form{
+    /* display: flex; */
+    height: 600px;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    background-color: #585757b5;
+    
+}
+
+.input #produto {
+    width: 300px;
+    height: 50px;
+}
+
+.input #tipo {
+    width: 300px;
+    height: 50px;
+}
+
+.input #descricao {
+    width: 300px;
+    height: 50px;
+}
+
+.input #preco {
+    width: 300px;
+    height: 50px;
+}
+
+.input #desconto {
+    width: 300px;
+    height: 50px;
+}
+
+.quite{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.components{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.title{
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-size: 40px;
+    margin-top: 10%;
+}
+
+.image{
+    display: flex;
+    margin-left: 20px;
+}
+
+::placeholder{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+label{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: #FFF;
+}
+
+.button{
+    display: flex;
+    height: 50px;
+    width: 520px;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover{
+    transition: all 0.5s ;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}

@@ -1,0 +1,22 @@
+.navBar{
+    padding-top: 20px;
+    padding-right: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+
+nav a{
+    color: rgb(252, 62, 62);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    transition: all ease-in-out 1s;
+}
+
+.textNav::hover{
+    font-size: 32px;
+    color: black;
+}
+
