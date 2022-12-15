@@ -24,7 +24,7 @@ Projeto pizzaria - O projeto contêm telas para o consumo dos produtos para que 
 ----
 
 ### Cadastros
-<img src="../github/img/cadastro_user.png" width="500px"></img> <img src="../../github/img/cadastro_produto.png" width="500px"></img>
+<img src="../github/img/cadastro_user.png" width="500px"></img> <img src="../github/img/cadastro_produto.png" width="500px"></img>
 
 ## Referência
 
