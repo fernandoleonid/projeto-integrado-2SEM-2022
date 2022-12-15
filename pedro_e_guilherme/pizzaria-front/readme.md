@@ -9,22 +9,22 @@ Projeto pizzaria - O projeto contêm telas para o consumo dos produtos para que 
 ## Fotos do Projeto!
 
 ### Home
-<img src="../../github/img/home.png" width="1000px"></img>
+<img src="../github/img/home.png" width="1000px"></img>
 
 ----
 
 ### Login
-<img src="../../github/img/login.png" width="1000px"></img>
+<img src="../github/img/login.png" width="1000px"></img>
 
 ----
 
 ### Dashboard
-<img src="../../github/img/dashboard.png" width="1000px"></img>
+<img src="../github/img/dashboard.png" width="1000px"></img>
 
 ----
 
 ### Cadastros
-<img src="../../github/img/cadastro_user.png" width="500px"></img> <img src="../../github/img/cadastro_produto.png" width="500px"></img>
+<img src="../github/img/cadastro_user.png" width="500px"></img> <img src="../../github/img/cadastro_produto.png" width="500px"></img>
 
 ## Referência
 
