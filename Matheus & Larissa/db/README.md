@@ -6,3 +6,7 @@
 ### Modelo lógico
 
 ![Modelo logico](./github-img/modelo_logico.png)
+
+### Modelo conceitual
+
+![Modelo conceitual](./github-img/modelo_conceitual.png)
