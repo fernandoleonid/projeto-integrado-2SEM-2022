@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+      "target": "ES2022",
+      "module": "CommonJS",
+      "lib": ["ESNext"],
+      "outDir": "./bin/v1",
+      "rootDir": "./src/v1",
+      "removeComments": true,
+      "noEmitOnError": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "resolveJsonModule": true
+  },
+  "include": [
+    "./src/v1"
+  ]
+}

@@ -1,0 +1,31 @@
+.header {
+  background-color: var(--bg-overflow);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 60px;
+}
+
+.header__buttons {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.header__button {
+  background-color: var(--gray-700);
+  color: var(--accent-color);
+  font-size: 1.25rem;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: all 200ms ease-in-out;
+}
+
+.header__button:hover {
+  background-color: var(--gray-600);
+  color: var(--white-color);
+  border-radius: 12px;
+}

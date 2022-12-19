@@ -1,0 +1,35 @@
+@import url(components/header.css);
+@import url(../../admin/assets/css/components/swal_style.css);
+@import url(components/main.css);
+@import url(components/scrollbar.css);
+@import url(components/footer.css);
+@import url(components/menu-burger.css);
+@import url(mobile.css);
+@import url(reset.css);
+@import url(colors.css);
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+.show {
+  display: flex;
+}
+
+.divider {
+  padding-top: 25px;
+  width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  color: var(--white-color);
+  max-width: 100vw;
+}
+
+h2 {
+  font-size: 48px;
+}

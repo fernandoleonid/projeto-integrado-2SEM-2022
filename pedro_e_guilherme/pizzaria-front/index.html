@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Pizzaria Paradiso</title>
+    <link href="assets/css/styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="assets/img/favicon-16x16.png" rel="shortcut icon" type="image/x-icon">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    <script defer src="assets/js/components/ItemCard.js" type="module"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/e2a54895da.js"></script>
+    <script defer src="assets/js/app.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script defer src="assets/js/form.js" type="module"></script>
+    <script defer src="assets/js/handleFilters.js" type="module"></script>
+
+    <link href="assets/css/swal_style.css" rel="stylesheet">
+
+</head>
+<body>
+<header class="header">
+    <img alt="Logo da pizzaria Paradiso" src="assets/img/Logo.png">
+    <a href="#" class="menu-burger-container">
+        <i class="menu-burger"></i>
+    </a>
+    <ul class="header__buttons">
+        <li><a class="header__button" href="#">Home</a></li>
+        <li>
+            <a class="header__button" href="#promo">Promoções</a>
+        </li>
+        <li>
+            <a class="header__button" href="#produtos">Produtos</a>
+        </li>
+    </ul>
+</header>
+<main>
+    <div class="main-banner">
+        <div class="main-banner__info">
+            <h1 class="info__title">Seja bem vindo à <span class="accent-text">Pizza Paradiso</span></h1>
+            <span class="info__address">Ficamos na <span
+                    class="accent-text">Av. Luis Carlos Berrini, nº 666</span></span>
+        </div>
+        <span class="main-banner__description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt non massa id iaculis. Pellentesque velit lacus, auctor ac suscipit in, consequat sed turpis. Ut sollicitudin magna at posuere bibendum. Etiam in odio enim. Sed ultrices risus non blandit semper. Sed at velit volutpat, mollis lacus vitae, pretium risus. Duis hendrerit ante vitae cursus tempor.
+      </span>
+    </div>
+
+    <section id="promo" class="promo-section">
+      <h2 class="promo-section__title">Produtos em <span class="accent-text">Promoção</span></h2>
+      <ul class="outer-box">
+        <li>
+
+            </li>
+        </ul>
+    </section>
+    <img alt="divider" class="divider" src="assets/img/Divider.svg">
+    <section class="section-fav">
+        <h2 class="section-fav__title">Favoritas</h2>
+        <ul class="outer-box">
+            <li>
+                <!--          <item-card title="mussarela" ingredients="Queijo e orégano." price="30,99"></item-card>-->
+                <!--          <item-card title="mussarela" ingredients="Queijo e orégano." price="30,99"></item-card>-->
+                <!--          <item-card title="mussarela" ingredients="Queijo e orégano." price="30,99"></item-card>-->
+            </li>
+        </ul>
+    </section>
+    <section class="section-foods" id="produtos">
+        <h2 class="underline-accent">Cardápio</h2>
+
+        <ul class="outer-box filters-list">
+            <li class="select-input">
+                <span class="select-input__title">Categoria</span>
+                <select class="select-input__option" id="category-filter">
+                    <option selected value="Any">Any</option>
+                </select>
+            </li>
+            <li class="select-input">
+                <span class="select-input__title">Tipo</span>
+                <select class="select-input__option">
+                    <option selected value="Any">Any</option>
+                </select>
+            </li>
+            <li class="select-input">
+                <span class="select-input__title">Tipo</span>
+                <select class="select-input__option">
+                    <option selected value="Any">Any</option>
+                </select>
+            </li>
+            <!-- <li class="select-input">
+            <span class="select-input__title">Tipo</span>
+            <select class="select-input__option">
+              <option value="Any" selected>Any</option>
+              <option value="Bebida">Bebida</option>
+              <option value="Pizza">Pizza</option>
+            </select>
+          </li> -->
+        </ul>
+
+        <div class="grid-foods">
+
+        </div>
+    </section>
+
+    <img alt="divider" class="divider" src="assets/img/Divider.svg">
+
+    <section class="services">
+        <h2>O que oferecemos?</h2>
+        <div class="services__cards-container">
+            <div class="services__card">
+                <i class="fa-solid fa-truck"></i>
+                <span>Delivery</span>
+            </div>
+            <div class="services__card">
+                <i class="fa-solid fa-truck"></i>
+                <span>Delivery</span>
+            </div>
+            <div class="services__card">
+                <i class="fa-solid fa-truck"></i>
+                <span>Delivery</span>
+            </div>
+        </div>
+    </section>
+
+    <img alt="divider" class="divider" src="assets/img/Divider.svg">
+
+    <section>
+        <h2>Fale com a gente!</h2>
+        <form class="contact-form">
+            <input id="name-input" placeholder="Nome" type="text">
+            <!-- <input type="tel" id="phone-input" placeholder="Telefone"> -->
+            <input id="cell-input" placeholder="Celular" type="tel">
+            <input id="mail-input" placeholder="E-mail" type="email">
+            <div class="contact-form__option">
+                <label>
+                    Sugestão
+                    <input name="group" type="radio" value="Sugestao">
+                </label>
+                <label>
+                    Crítica
+                    <input name="group" type="radio" value="Critica">
+                </label>
+            </div>
+            <textarea cols="30" id="message" name="mensagem" placeholder="Mensagem" rows="10"></textarea>
+            <button class="contact-form__submit" type="submit">Enviar mensagem</button>
+        </form>
+    </section>
+</main>
+<footer>
+    <div class="container-footer">
+        <span></span>
+        <span>Pedro V | Guilherme J</span>
+        <ul class="container-footer__social-container">
+            <li>
+                <a class="social-container__button" href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </li>
+            <li>
+                <a class="social-container__button" href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a class="social-container__button" href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</footer>
+<!-- <item-card title="mussarela" ingredients="Queijo e orégano." price="30,99"></item-card> -->
+</body>
+</html>

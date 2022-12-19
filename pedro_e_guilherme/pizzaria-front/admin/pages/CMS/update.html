@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>CMS - Pizzaria Paradiso</title>
+
+    <link href="../../assets/css/register_styles/styles.css" rel="stylesheet">
+    <link href="../../assets/css/update_styles/update.css" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script defer type="module">
+        import {fetchCategory} from "../../js/utils/fetchCategory.js";
+        import {loadData} from "../../js/utils/loadData.js";
+        // noinspection ES6UnusedImports
+        // import {fetchTypes} from "../../js/utils/fetchTypes.js"; NAO FUNCIONANDO
+        const idProduct = localStorage.getItem('id_product')
+        const idProductType = localStorage.getItem('id_product_type')
+        await loadData(idProduct, idProductType);
+
+        const category = document.querySelector('#category-select');
+        await fetchCategory(category);
+
+
+    </script>
+
+    <script>
+        const fetchIngredients = async () => {
+            const {data} = await axios.get(`https://pizza-cms-api.netlify.app/.netlify/functions/server/ingredient`, {headers: {common: {Authorization: `Bearer ${localStorage.getItem('access_token')}`}}});
+            console.log(data);
+            const ingredientsDiv = document.querySelector('.outer-box li');
+
+            data.payload.forEach((ingredient) => {
+                const div = document.createElement('div');
+                div.classList.add('ingredient-box');
+                const input = document.createElement('input');
+                input.classList.add('ingredient-box');
+                input.type = 'checkbox';
+                input.name = 'ingredient';
+                input.id = ingredient.id;
+                input.value = ingredient.name;
+                const label = document.createElement('label');
+                label.htmlFor = ingredient.id;
+                label.textContent = ingredient.name;
+
+                div.appendChild(input);
+                div.appendChild(label);
+                ingredientsDiv.appendChild(div);
+            });
+        };
+
+        const changeIngredientsDiv = async (type) => {
+            const ingredientsDiv = document.querySelector('.outer-box');
+            if (type === 'bebida') {
+                ingredientsDiv.innerHTML = `<input name="volume" class="input-string" type="number" step="150" max="2500" min="150" placeholder="Volume (ml)">`
+            } else {
+                ingredientsDiv.innerHTML = `<span class="title_ingredients">Ingredientes</span>
+                                                        <li style="margin-top: 10px; min-width: 20vw;">
+
+                                                        </li>
+                                                        `;
+                await fetchIngredients();
+            }
+        }
+
+        const fetchTypes = async (categoryInput, divToAppend) => {
+            const inputName_Stuffing = document.querySelector(`input[name="stuffing"]`) || document.querySelector('input[name="name"]');
+            try {
+                if (divToAppend.lastElementChild) {
+                    divToAppend.innerHTML = '';
+                }
+
+                let typeSelected = categoryInput.value.toLowerCase();
+                changeIngredientsDiv(typeSelected);
+
+                inputName_Stuffing.name = 'stuffing';
+                inputName_Stuffing.placeholder = 'Recheio';
+
+                if (typeSelected.includes("bebida")) {
+                    typeSelected = "drink";
+                    inputName_Stuffing.name = 'name';
+                    inputName_Stuffing.placeholder = 'Nome'
+                }
+                const {data} = await axios.get(`https://pizza-cms-api.netlify.app/.netlify/functions/server/${typeSelected}/types`, {headers: {common: {Authorization: `Bearer ${localStorage.getItem('access_token')}`}}});
+
+                data.payload.forEach((type) => {
+                    const option = document.createElement('option');
+                    option.value = type.name;
+                    option.textContent = type.name;
+
+                    divToAppend.appendChild(option);
+                });
+            } catch (e) {
+                console.log(e);
+            }
+        }
+
+        const handleUpdate = () => {
+          const form = document.querySelector('form');
+          const getFormData = () => new FormData(form);
+            const formData = getFormData();
+            for (const pair of formData.entries()) { // notation: How to verify an FormData in console.
+                console.log(`${pair[0]}, ${pair[1]}`);
+            }
+        }
+    </script>
+</head>
+<body>
+<header>
+    <button class="button_return" onclick="history.back()">Voltar</button>
+</header>
+
+<main>
+    <div class="main__form">
+        <form class="main__form__form" method="POST">
+            <fieldset>
+                <input class="input-string" name="stuffing" placeholder="Recheio" type="text">
+                <select id="category-select" name="categoria"
+                        onchange="{fetchTypes(this ,document.querySelector('#type-select'))}">
+                    <option disabled selected value="pizza">Categoria</option>
+                </select>
+                <select id="type-select" name="type">
+                    <option disabled selected>Type</option>
+                </select>
+                <input class="input-string" name="price" placeholder="Price" step="0.50" type="number">
+                <ul class="outer-box" style="list-style: none">
+                    <span class="title_ingredients">Ingredientes</span>
+                    <li style="margin-top: 10px">
+                        <div class="ingredient-box">
+                        </div>
+
+                    </li>
+                </ul>
+                <div class="promo-option">
+                    <input id="promo-input" name="" type="checkbox">
+                    <label for="promo-input" id="promo-label">Desconto</label>
+                </div>
+                <input class="input-string" name="saleOffValue" placeholder="%" style="visibility: hidden" type="number"
+                       value="0">
+            </fieldset>
+            <label class="file" for="imagem">
+                <i class="fa-regular fa-user"></i>
+            </label>
+            <input id="imagem" name="profile_picture" type="file">
+
+        </form>
+    </div>
+</main>
+
+<footer style="display: flex; align-items:center; justify-content: center;">
+    <button class="button_cadastro" type="button" onclick="handleUpdate()">Atualizar</button>
+</footer>
+
+</body>
+</html>

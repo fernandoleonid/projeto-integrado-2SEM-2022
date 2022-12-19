@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <title>Dashboard - Pizza Paradiso</title>
+
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/e2a54895da.js"></script>
+    <link href="../../assets/css/dashboard_styles/styles.css" rel="stylesheet">
+    <link href="../../../assets/css/mobile.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="../../js/products.js" type="module"></script>
+    <script defer src="../../js/statistics.js" type="module"></script>
+    <script>
+        const handleEdit = () => {
+            const spanDesc = document.querySelector('.text-desc');
+            spanDesc.classList.toggle('not-visible')
+            document.addEventListener('click', (e) => {
+                document.querySelectorAll('.table-products__product-row').forEach((tr) => {
+                    tr.style.cursor = 'pointer';
+                });
+                console.log(e.target.parentElement.tagName);
+                if (e.target.parentElement.tagName === 'TR') {
+                    localStorage.setItem('id_product', e.target.parentElement.id);
+                    localStorage.setItem('id_product_type', e.target.parentElement.getAttribute('id-product-type'))
+                    location.href = 'update.html';
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<header class="dash-header">
+    <img alt="Logo da empresa Pizza paradiso" src="../../../assets/img/Logo.png">
+
+        <button class="dash-header__exit-button" onclick="location.href = '../../index.html'" type="button"><i
+            class="fa-solid fa-arrow-right-from-bracket"></i></button>
+
+
+</header>
+<main>
+    <div class="grid-content">
+        <div class="grid-content__main-container">
+            <div class="main-container__menu">
+                <ul>
+                    <li>
+                        <a onclick="handleEdit()"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </li>
+                    <li>
+                        <a href="registers.html"><i class="fa-solid fa-plus"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <span class="text-desc not-visible">Clique em algum produto para modifica-lo!</span>
+            <table class="table-products">
+                <thead>
+                <tr class="table-products__titles-row">
+                    <th>Categoria</th>
+                    <th>Tipo</th>
+                    <th>Nome</th>
+                    <th>Foto</th>
+                    <th>Preço</th>
+                    <th>Ingredientes</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="grid-content__infos-container">
+            <span class="grid-content__title">Estatísticas</span>
+            <div class="grid-content__insights-container">
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>
