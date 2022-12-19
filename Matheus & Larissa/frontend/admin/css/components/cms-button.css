@@ -1,0 +1,20 @@
+.cms-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: #FFF;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 200ms ease-in-out;
+}
+
+.cms-button:hover {
+  background-color: rgba(148, 27, 12, 0.2);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cms-button.active {
+  background-color: rgba(148, 27, 12, 0.2);
+}

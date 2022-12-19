@@ -1,0 +1,63 @@
+@import url(../../assets/css/reset.css);
+@import url(../../assets/css/root.css);
+
+@import url(./components/body.css);
+@import url(./components/cms-button.css);
+@import url(./components/background-pizza.css);
+@import url(./components/header-cms.css);
+@import url(./components/register-container.css);
+@import url(./components/input-styles.css);
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discount-input-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+#discount-label-input-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+#discount-label-input-container input[type='checkbox'] {
+  transform: translateY(-4px);
+  width: 25px;
+  height: 25px;
+}
+
+#discount-label-input-container label {
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: 200;
+}
+
+#product-size-select,
+#product-type-select {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: 200;
+  font-family: 'Inter', sans-serif;
+  border-radius: 64px;
+  padding: 12px 24px;
+  outline: none;
+}
+
+#product-size-select option,
+#product-type-select option {
+  border: none;
+  background-color: #fff;
+  color: #121212;
+}
+
+.submit-button {
+  margin: 2rem;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS Novo Produto - Pizzaria Senailicious</title>
+    <link rel="stylesheet" href="./css/new-admin.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/newAdmin.js" defer type="module"></script>
+  </head>
+  <body>
+    <header>
+      <a href="./cms-home.html" class="pizzaria-logo">
+        <img src="../assets/img/pizzaria-logo.png" alt="Logo da Pizzaria" />
+      </a>
+      <nav>
+        <a href="./cms-new-product.html" class="cms-button">Novo Produto</a>
+        <a href="#" class="cms-buttonactive ">Cadastrar Administrador</a>
+        <a href="./index.html" class="cms-button">Sair</a>
+        <div class="admin-profile">
+          <div class="profile-photo">
+            <img src="./img/user.png" alt="Foto de perfil" id="admin-photo"/>
+          </div>
+          <span class="admin-name" id="admin-name">Nome admin</span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <form class="register-container">
+        <div class="input-row">
+          <div class="input-container">
+            <label for="new-admin-name">Nome</label>
+            <input
+              type="text"
+              name="admin-name"
+              id="new-admin-name"
+              class="register-input"
+              required
+            />
+          </div>
+          <div class="image-input-container">
+            <label for="new-admin-photo">Foto</label>
+            <input
+              type="file"
+              accept="image/jpg, image/png"
+              src="./img/images.png"
+              alt="Imagem de perfil"
+              id="new-admin-photo"
+            />
+          </div>
+        </div>
+        <div class="input-container">
+          <label for="new-admin-email">E-mail</label>
+          <input
+            type="email"
+            name="admin-email"
+            id="new-admin-email"
+            class="register-input"
+            required
+          />
+        </div>
+        <div class="input-container">
+          <label for="new-admin-password">Senha</label>
+          <input
+            type="password"
+            name="admin-password"
+            id="new-admin-password"
+            class="register-input"
+            required
+          />
+        </div>
+        <div class="input-container">
+          <label for="confirm-admin-password">Confirme sua senha</label>
+          <input
+            type="password"
+            name="confirm-admin-password"
+            id="confirm-admin-password"
+            class="register-input"
+            required
+          />
+        </div>
+        <button type="button" class="submit-button">Salvar</button>
+      </form>
+    </main>
+    <img
+      src="./img/pizza-background.png"
+      alt="Pizza"
+      class="background-pizza"
+    />
+  </body>
+</html>

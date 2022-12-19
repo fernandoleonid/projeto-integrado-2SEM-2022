@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS Novo Produto - Pizzaria Senailicious</title>
+    <link rel="stylesheet" href="./css/new-product.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/newProduct.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+      <a href="./cms-home.html" class="pizzaria-logo">
+        <img src="../assets/img/pizzaria-logo.png" alt="Logo da Pizzaria" />
+      </a>
+      <nav>
+        <a href="./cms-new-product.html" class="cms-button active"
+          >Novo Produto</a
+        >
+        <a href="./cms-new-admin.html" class="cms-button"
+          >Cadastrar Administrador</a
+        >
+        <a href="./index.html" class="cms-button">Sair</a>
+        <div class="admin-profile">
+          <div class="profile-photo">
+            <img
+              src="./img/user.png"
+              alt="Foto de perfil"
+              class="admin-profile-img"
+              id="admin-photo"
+            />
+          </div>
+          <span class="admin-name" id="admin-name">Nome admin</span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <form class="register-container">
+        <div class="input-row">
+          <div class="input-container">
+            <label for="product-name-input">Nome</label>
+            <input
+              type="text"
+              name="product-name"
+              id="product-name-input"
+              placeholder="Insira o nome do produto"
+              class="register-input"
+              required
+            />
+          </div>
+          <div class="input-container">
+            <label for="product-name-input">Tipo</label>
+            <select name="product-type" id="product-type-select" required>
+              <option value="pizza">Pizza</option>
+              <option value="drink">Bebida</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-container">
+            <label for="product-size-select">Tamanho</label>
+            <select
+              name="product-size-select"
+              id="product-size-select"
+              required
+            >
+              <option value="bud">Broto</option>
+              <option value="normal">Normal</option>
+              <option value="big">Grande</option>
+            </select>
+          </div>
+          <div class="input-container">
+            <label for="product-ingredients-input">Ingredientes</label>
+            <input
+              type="text"
+              name="product-ingredients"
+              id="product-ingredients-input"
+              placeholder="Insira os ingredientes do produto (ing1, ing2, ing3)"
+              class="register-input"
+            />
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-container">
+            <label for="product-category-input">Categoria</label>
+            <input
+              type="text"
+              name="product-category"
+              id="product-category-input"
+              placeholder="Pizza doce, salgada, bebida alcoólica..."
+              class="register-input"
+              required
+            />
+          </div>
+          <div class="image-input-container">
+            <label for="product-ingredients-input">Imagem</label>
+            <input
+              type="file"
+              src="./img/images.png"
+              alt="Insira a foto do produto"
+            />
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-container">
+            <label for="product-category-input">Preço</label>
+            <input
+              type="number"
+              name="product-price"
+              id="product-price-input"
+              placeholder="Insira o preço do produto"
+              class="register-input"
+              required
+              min="0"
+            />
+          </div>
+          <div class="input-container">
+            <label for="product-discount-input">Promoção</label>
+            <div class="discount-input-container">
+              <div id="discount-label-input-container">
+                <input type="checkbox" name="yes" id="yes-discount-option" />
+                <label for="yes-discount-option">Sim</label>
+              </div>
+              <input
+                type="number"
+                name="discount-percentual"
+                id="product-discount"
+                placeholder="% da promoção"
+                class="register-input"
+                min="0"
+                max="100"
+              />
+            </div>
+          </div>
+        </div>
+        <button type="button" id="submit-button" class="submit-button">
+          Salvar
+        </button>
+      </form>
+    </main>
+    <img
+      src="./img/pizza-background.png"
+      alt="Pizza"
+      class="background-pizza"
+    />
+  </body>
+</html>

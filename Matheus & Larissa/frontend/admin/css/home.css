@@ -1,0 +1,88 @@
+@import url(../../assets/css/reset.css);
+@import url(../../assets/css/root.css);
+
+@import url(./components/body.css);
+@import url(./components/cms-button.css);
+@import url(./components/background-pizza.css);
+@import url(./components/header-cms.css);
+
+main {
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(2px);
+  overflow-y: scroll;
+}
+
+main::-webkit-scrollbar {
+  background-color: #121212;
+}
+
+main::-webkit-scrollbar-thumb {
+  background-color: var(--yellow-500);
+}
+
+.products-table {
+  width: 100%;
+  height: fit-content;
+  padding: 1.5rem 3rem;
+}
+
+.column-names th {
+  font-weight: 700;
+  border-bottom: 1px solid #fff;
+}
+
+.column-names th,
+.product-row td {
+  height: 150px;
+  color: #fff;
+  font-size: 1.5rem;
+  border-spacing: none;
+}
+
+.product-row td {
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+.product-row td:first-child {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.product-row td:last-child {
+  border-radius: 0px 10px 10px 0px;
+  border-right: none;
+}
+
+.product-img {
+  width: 175px;
+  height: 100%;
+  object-fit: cover;
+}
+
+tr.product-row:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.delete-button {
+  width: 85px;
+  height: 85px;
+  background-color: var(--yellow-500);
+  border-radius: 50%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px #121212;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.delete-button i {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 5px #121212;
+}

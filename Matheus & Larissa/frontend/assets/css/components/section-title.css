@@ -1,0 +1,14 @@
+.section-title {
+  color: var(--yellow-500);
+  font-size: 6rem;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 4rem;
+    width: 100%;
+  }
+}

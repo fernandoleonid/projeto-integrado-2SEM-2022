@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000000;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+input, button, textarea {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul, li {
+  list-style-type: none;
+}

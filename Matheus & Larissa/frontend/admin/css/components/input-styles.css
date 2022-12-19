@@ -1,0 +1,50 @@
+@import url(../../../assets/css/components/submit-button.css);
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.image-input-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.input-container label,
+.image-input-container label {
+  color: var(--yellow-200);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.register-input {
+  background: none;
+  border-bottom: 2px solid #fff;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+input[type='image'] {
+  width: 115px;
+  height: 115px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  object-fit: cover;
+  justify-self: center;
+  border-radius: 5px;
+}

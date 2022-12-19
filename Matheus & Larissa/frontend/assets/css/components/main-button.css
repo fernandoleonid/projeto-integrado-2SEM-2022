@@ -1,0 +1,22 @@
+.main-button {
+  background: linear-gradient(to right, var(--yellow-500), var(--yellow-200));
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem 2rem;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 50px;
+  transition: all 200ms ease-in-out;
+}
+
+.main-button:hover {
+  filter: brightness(80%);
+}
+
+@media (max-width: 768px) {
+  .main-button {
+    padding: 0.5rem 1rem;
+    font-size: 3rem;
+  }
+}

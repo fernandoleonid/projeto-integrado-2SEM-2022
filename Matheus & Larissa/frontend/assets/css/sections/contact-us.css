@@ -1,0 +1,132 @@
+#contact-us {
+  min-height: fit-content;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.message-before-container {
+  display: flex;
+  width: 50%;
+  overflow: visible;
+}
+
+.contact-us-message {
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: var(--white-500);
+  width: 100%;
+}
+
+.message-before-container::before {
+  content: '';
+  display: inline-block;
+  background-color: #fff;
+  width: 2px;
+  transform: translateX(-1rem);
+}
+
+#contact-us-form {
+  width: 558px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex;
+  align-items: flex-start;
+  padding: 32px 48px;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  -webkit-backdrop-filter: blur( 4px );
+  backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.form-input {
+  font-size: 1.5rem;
+  background-color: rgba( 255, 255, 255, 0.25 );
+  padding: 12px 16px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 6px 0 12px 0;
+  transition: all 200ms ease-in-out;
+}
+
+.form-input:focus {
+  background-color: rgba( 255, 255, 255, 0.50 );
+  -webkit-backdrop-filter: blur( 4px );
+  backdrop-filter: blur(4px);
+}
+
+#contact-us-form label {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 700;
+}
+
+#contact-us-form label.message-type-label {
+  font-weight: 200;
+  font-style: italic;
+}
+
+.input-group, .message-type-container {
+  display: flex;
+  gap: 30px;
+}
+
+.message-type-container {
+  margin-top: 6px;
+}
+
+input[type="tel"] {
+  font-size: 1rem;
+  padding: 18px 16px;
+}
+
+input[type="radio"] {
+  appearance: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  border: 3px solid var(--white-500);
+  background-color: var(--white-100);
+}
+
+input[type="radio"]:checked {
+  background-color: var(--black-500);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .message-before-container {
+    display: none;
+  }
+
+  .input-group,
+  .input-row input {
+    width: 100%;
+  }
+
+  #contact-us-form {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  #contact-us-form .input-group {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  textarea {
+    height: 170px;
+  }
+}
