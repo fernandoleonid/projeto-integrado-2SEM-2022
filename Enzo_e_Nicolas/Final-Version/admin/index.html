@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="shortcut icon" href="../assents/img/img-logo2.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,100;1,400&display=swap" rel="stylesheet">
+  
+
+    <script src="./login.js" defer type="module"></script>
+    <script src="https://kit.fontawesome.com/5f2b9e6a48.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>La Pizzaria</title>
+</head>
+<body>
+    <main>
+        <div class="form">
+             <form class="components" action="">
+                 <div class="textTitle">
+                     <h2 class="title">Login</h2>
+                 </div>
+                 <div class="quite">
+                     <div class="inputs">
+                         <label for="">Email:</label> 
+                         <div class="input">
+                             <input id="email" name="email" type="email" placeholder="Email">
+                         </div>
+                     </div>
+                     <div class="inputs">
+                        <label for="">Senha:</label> 
+                        <div class="input">
+                            <input id="senha" name="senha" type="password" placeholder="Senha">
+                        </div>
+                    </div>
+                     <div class="image">
+                         <label class="picture" for="picture__input" tabIndex="0">
+                             <span class="picture__image">
+                                 <i class="fa-light fa-plus fa-10x"></i>
+                             </span>
+                         </label>
+                         <input type="file" name="picture__input" id="picture__input">
+                     </div>
+                 </div>
+                 <div class="container__button">
+                     <button class="button">Login</button>
+                 </div>
+             </form>
+        </div>
+     </main>
+</body>
+</html>

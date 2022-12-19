@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,100;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5f2b9e6a48.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../assents/img/img-logo2.png" type="image/x-icon">
+    <script src="../section-cardapio/sectionCardapio.js" defer type="module"></script>
+    <script src="../section-promocao/sectionPromo.js" defer type="module"></script>
+    <script src="../section-cardapio/sectionContato.js" defer type ="module"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>La Pizzaria</title>
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <img class="img-logo" src="../assents/img/img-logo2.png" alt="">
+                <a class="text-logo" href="">La Pizzaria</a>
+                <div class="mobile-menu">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+
+            <ul class="nav-list">
+                <li>
+                    <a href="#apresentacao">Apresentação</a>
+                </li>
+                <li>
+                    <a href="#promocoes">Promoções</a>
+                </li>
+                <li>
+                    <a href="#cardapio">Cardápio</a>
+                </li>
+                <li>
+                    <a href="#servicos">Serviços</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="container-apresentacao" id="apresentacao">
+            <div class="text-apresentacao">
+                <h1 class="text-welcome">
+                    Seja bem vindo a
+                </h1>
+                <h2 class="laPizzaria"> <span class="text-green">La</span>
+                    <span class="text-white">Pizza</span>
+                    <span class="text-red">ria</span>
+                </h2>
+                <p>
+                    Com um sabor explêndido e feito com muito amor.
+                    Afinal, feliz e pizza tem cinco letras, não pode ser coincidência.
+                </p>
+            </div>
+        </section>
+        <section class="container-promocao" id="promocoes">
+            <div class="componentes-promo">
+                <div class="title-promo">Promoção</div>
+                <div class="container-cards">
+               
+                </div>
+            </div>
+        </section>
+        <section class="container-favorito">
+            <div class="title-fav">Favoritas</div>
+        </section>
+        <section class="container-cardapio" id="cardapio">
+            <div class="title-cardapio">
+                <div class="line-cardapio1"></div>
+                <div class="elipse1"></div>
+                <span class="text-cardapio">nosso cardápio</span>
+                <div class="elipse2"></div>
+                <div class="line-cardapio2"></div>
+                
+            </div>
+
+            <div class="container-card-pizza">
+                <div class="grid-traditional">
+                    <div class="elipse3"></div>
+                    
+                </div>
+            </div>
+        </section>
+        <section class="container-servicos" id="servicos">
+            <div class="servico">
+
+            </div>
+            <div class="container-como_funciona">
+                <div class="passo-um">
+                    <img src="../assents/img/image 3.png" alt="">
+                    <span class="text-passo-um">Você seleciona o seu pedido.</span>
+                </div>
+                <div class="passo-dois">
+                    <img src="../assents/img/image 4.png" alt="">
+                    <span class="text-passo-dois">Nossos chefes preparam o seu pedido.</span>
+                </div>
+                <div class="passo-tres">
+                    <img src="../assents/img/image 5.png" alt="">
+                    <span class="text-passo-tres">O seu pedido entra em modo de preparo.</span>
+                </div>
+                <div class="passo-quatro">
+                    <img src="../assents/img/imagem4.png" alt="">
+                    <span class="text-passo-quatro"> O seu pedido será entregue para você!</span>
+                </div>
+            </div>
+        </section>
+        <section class="container-contato" id="contato">
+
+            <div class="contato">
+                <div class="title-contato">
+                    <span class="entre-contato">Entre em Contato</span>
+                    <span class="atendelo-contato">É um prazer atende-lo</span>
+                </div>
+                <div class="inputs-contato">
+                    <input class="nome-contato" type="text" placeholder="NOME">
+                    <input class="email-contato" type="email" placeholder="EMAIL">
+                    <input class="celular-contato" type="tel" placeholder="CELULAR">
+                    <input class="telefone-contato" type="tel" placeholder="TELEFONE">
+                </div>
+                <div class="input-checkbox">
+                    <div class="text-input">
+                        <span>Sugestão</span>
+                        <span>Crítica</span>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox">
+                        <input type="checkbox">
+                    </div>
+                </div>
+                <div class="input-message">
+                    <span>Mensagem:</span>
+                    <input class="mensagem" type="text">
+                </div> 
+                <button class="ENVIAR">ENVIAR</button> 
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <div class="footer-pizzaria">
+            <div class="title-footer">
+                <span>
+                    la pizzaria
+                </span>
+            </div>
+            <div class="cardapio-footer">
+                <a href="#cardapio">CARDÁPIO</a>
+                <ul>
+                    <li>Pizzas</li>
+                    <li>Bebidas</li>
+                </ul>
+            </div>
+            <div class="sobre-footer">
+                <a href="#apresentacao">SOBRE NÓS</a>
+                <ul>
+                    <li>Apresentação</li>
+                </ul>
+            </div>
+            <div class="atendimento-footer">
+                <a href="#contato">ATENDIMENTO AO CLIENTE</a>
+                <ul>
+                    <li>Fale Conosco</li>
+                </ul>
+            </div>
+            <div class="localizacao-footer">
+                <span>
+                    LOCALIZAÇÃO
+                </span>
+                <ul>
+                    <li>Av. Luis Carlos Berrini, nº 666</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <a class="button-backtop" href="#header">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+</body>
+
+</html>

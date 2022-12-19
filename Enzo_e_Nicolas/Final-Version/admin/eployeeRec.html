@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assents/img/img-logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/eployee.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../css/navBar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,100;1,400&display=swap" rel="stylesheet">
+    <script src="../section-employer/register.js" defer type = "module"></script>
+    <script src="https://kit.fontawesome.com/5f2b9e6a48.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
+   
+    <title>La Pizzaria</title>
+</head>
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="navBar">
+                <li class="linha">
+                    <a href="./eployeeRec.html" class="textNav">USUARIO</a>
+                </li>
+                <li>
+                    <a href="./adminProduct.html">PRODUTOS</a>
+                </li>
+                <li>
+                    <a href="./index.html">LOGIN</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+       <div class="form">
+            <form class="components" action="" id="form-register-employee">
+                <div class="textTitle">
+                    <h2 class="title">Cadastro Funcionário</h2>
+                </div>
+                <div class="quite">
+                    <div class="inputs">
+                        <label class="name" for="">Nome</label>
+                        <div class="input">
+                            <input id="nome" name="nome" type="text" placeholder="Nome">
+                        </div>
+                        <label for="">Email</label>
+                        <div class="input">
+                            <input id="email" name="email" type="email" placeholder="Email">
+                        </div>
+                        <label for="">Telefone</label>
+                        <div class="input">
+                            <input id="telefone" name="telefone" type="telefone" placeholder="telefone">
+                        </div>
+                        <label for="">Senha</label> 
+                        <div class="input">
+                            <input id="senha" name="senha" type="password" placeholder="Senha">
+                        </div>
+                    </div>
+                    <div class="image">
+                        <label class="picture" for="picture__input" tabIndex="0">
+                            <span class="picture__image">
+                                <i class="fa-light fa-plus fa-10x"></i>
+                            </span>
+                        </label>
+                        <input type="file" name="picture__input" id="picture__input">
+                    </div>
+                </div>
+                <div class="container__button">
+                    <button class="button">CRIAR</button>
+                </div>
+            </form>
+       </div>
+    </main>
+</body>
+</html>
